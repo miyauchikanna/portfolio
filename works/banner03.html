@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works｜Canna design</title>
+    <meta name="description" content="バナー広告DELUX BURGER">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../android-chrome-192x192.png">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../index.html#service">Service</a></li>
+                <li><a href="index.html"><span>Works</span></a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sp_btn">
+            <span></span>
+            <div class="sp_btn_arrow"><img src="../img/sp_btn@2x.png" alt="矢印"></div>
+        </div>
+        <nav class="sp_nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../index.html#service">Service</a></li>
+                <li><a href="index.html"><span>Works</span></a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="top_part"><img src="img/leaf@2x.png" alt="木"></div>
+    </header>
+
+    <section class="works_detail">
+        <h2>バナー広告</h2>
+        <div><img src="img/works6@2x-80.jpg" alt="deluxe burger"></div>
+        <div class="works_text">
+            <dl>
+                <dt>カテゴリ</dt>
+                <dd>バナー広告</dd>
+                <dt>担当範囲</dt>
+                <dd>デザイン</dd>
+                <dt>制作期間</dt>
+                <dd>1週間</dd>
+                <dt>使用ツール</dt>
+                <dd>Illustrator/Photoshop</dd>
+                <dt>対応機種</dt>
+                <dd>PC/SP</dd>
+            </dl>
+            <div class="works_text2">
+                <h3>コメント</h3>
+                <p>高級感がでるようにブラックとゴールドでまとめています。<br>文字と背景には、グラデーションをかけました。<br>画像はPhotoshopで切り抜きました。
+                </p>
+            </div>
+        </div>
+        <div class="works_banner"><img src="img/capture6@2x-80.jpg" alt="バナー全体"></div>
+        <div class="btn"><a class="btn_1" href="index.html">一覧に戻る</a></div>
+        <div class="part4"><img class="js-parallax" src="img/part4@2x.png" alt="葉"></div>
+        <div class="part5"><img class="js-parallax" src="img/part5@2x.png" alt="葉"></div>
+    </section>
+
+    <footer>
+        <nav class="footer_nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../index.html#service">Service</a></li>
+                <li><a href="index.html">Works</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <ul class="sns_btn">
+            <li><a href="https://www.instagram.com/knn_711/"><img src="img/inst_logo@2x.png" alt="instagram"></a></li>
+            <li><a href="mailto:knn_pink.mint7116@icloud.com"><img src="img/mail_logo@2x.png" alt="mail"></a></li>
+        </ul>
+        <p class="footer_item">@2023 Canna design</p>
+    </footer>
+
+    <script>
+        $(function () {
+            $('.sp_btn, .sp_nav li').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            });
+        })
+    </script>
+
+    <script type="text/javascript">
+        const targets = document.getElementsByClassName('works_detail');
+        for (let i = targets.length; i--;) {
+            let observer = new IntersectionObserver((entries, observer) => {
+                for (let j = entries.length; j--;) {
+                    if (entries[j].isIntersecting) {
+                        entries[j].target.classList.add('active');
+                        observer.unobserve(entries[j].target);
+                    }
+                }
+            });
+            observer.observe(targets[i]);
+        }
+    </script>
+
+</body>
+
+</html>

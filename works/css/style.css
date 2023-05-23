@@ -1,0 +1,418 @@
+@charset "utf-8";
+
+/* works一覧 */
+
+.works_title {
+    width: 204px;
+    margin: 0 auto 115px;
+}
+
+.works_item {
+    max-width: 930px;
+    margin: 0 auto;
+    display: grid;
+    gap: 150px 70px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 300px;
+}
+
+.works_info p {
+    margin-bottom: 25px;
+}
+
+.part1 {
+    width: 55px;
+    position: absolute;
+    top: 50px;
+    left: 200px;
+}
+
+.part2 {
+    width: 40px;
+    position: absolute;
+    top: 1000px;
+    left: 90px;
+}
+
+.part3 {
+    width: 208px;
+    position: absolute;
+    top: 1700px;
+    right: 150px;
+}
+
+.works {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s, transform 1s;
+}
+.works.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.works_info {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s, transform 1s;
+}
+.works_info.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+@media screen and (max-width: 767px) {
+    .works {
+        margin-top: 50px;
+    }
+
+    .works_item {
+        display: block;
+        max-width: 315px;
+    }
+
+    .works_info {
+        margin-bottom: 105px;
+    }
+
+    .part1 {
+        width: 40px;
+        top: 570px;
+        left: 240px;
+    }
+
+    .part2 {
+        width: 35px;
+        top: 1280px;
+        left: 250px;
+    }
+
+    .part3 {
+        width: 150px;
+        top: 2760px;
+        left: 90px;
+    }
+}
+
+/* works詳細web1 */
+
+.works_detail {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.works_detail h2 {
+    font-size: 40px;
+    margin-bottom: 27px;
+    text-align: center;
+}
+
+.works_detail img {
+    width: 1000px;
+}
+
+.works_text dl {
+    display: flex;
+    flex-wrap: wrap;
+    width: 360px;
+}
+
+.works_text dt {
+    width: 40%;
+    font-weight: bold;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #6fb300;
+}
+
+.works_text dd {
+    width: 60%;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #6fb300;
+}
+
+.works_text {
+    display: flex;
+    max-width: 890px;
+    margin: 0 auto 265px;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.works_text2 {
+    width: 420px;
+    padding-top: 25px;
+}
+
+.works_text2 h3 {
+    font-size: 16px;
+    border-bottom: 1px dashed #6fb300;
+    padding-bottom: 5px;
+}
+
+.works_text2 p {
+    line-height: 1.75;
+    margin-top: 25px;
+}
+
+.works_img {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.btn_1 {
+    background: transparent;
+    padding: 15px 35px;
+    border-radius: 99rem;
+    border: 2px solid #6fb300;
+    color: #6fb300;
+    transition: 0.5s;
+    position: relative;
+}
+
+.btn_1:hover {
+    background-image: url(../img/btn@2x-80.jpg);
+    background-size: cover;
+    color: #fff;
+}
+
+.btn_1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 22.5px;
+    left: 130px;
+    width: 33px;
+    height: 2px;
+    background: #6fb300;
+    transition: 0.3s;
+}
+.btn_1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: -17px;
+    width: 13px;
+    height: 13px;
+    border: 2px solid;
+    border-color: transparent transparent #6fb300 #6fb300;
+    transform: rotate(-135deg);
+    transition: 0.3s;
+}
+
+.btn_1:hover::before {
+    left: 140px;
+}
+
+.btn_1:hover::after {
+    right: -27px;
+}
+
+.btn {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.part4 {
+    width: 30px;
+    position: absolute;
+    top: 60px;
+    left: -100px;
+}
+
+.part5 {
+    width: 54px;
+    position: absolute;
+    top: 1400px;
+    right: 10px;
+}
+
+.part6 {
+    width: 50px;
+    position: absolute;
+    top: 2400px;
+    left: 50px;
+}
+
+.works_detail {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s, transform 1s;
+}
+.works_detail.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+@media screen and (max-width: 767px) {
+    .works_detail {
+        margin-top: 65px;
+        max-width: 315px;
+    }
+
+    .works_detail h2 {
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+
+    .works_detail div {
+        margin: 0 auto;
+    }
+
+    .works_text {
+        display: block;
+    }
+
+    .works_text dl {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .works_text2 {
+        width: 315px;
+        padding-top: 145px;
+        padding-bottom: 125px;
+    }
+
+    .works_img {
+        width: 315px;
+        padding-bottom: 100px;
+    }
+
+    .btn_1 {
+        display: inline-block;
+        margin-bottom: 130px;
+    }
+
+    .part4 {
+        display: none;
+    }
+
+    .part5 {
+        top: 530px;
+        right: 60px;
+    }
+
+    .part6 {
+        top: 2200px;
+        left: 0px;
+    }
+}
+
+/* works詳細web2 */
+
+.works_img2 {
+    display: flex;
+    max-width: 850px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.PC {
+    width: 500px;
+}
+
+.SP {
+    width: 250px;
+}
+
+.part7 {
+    width: 54px;
+    position: absolute;
+    top: 1400px;
+    right: -70px;
+}
+
+.part8 {
+    width: 132px;
+    position: absolute;
+    top: 2900px;
+    left: 300px;
+}
+
+.part9 {
+    width: 60px;
+    position: absolute;
+    top: 3700px;
+    left: 100px;
+}
+
+@media screen and (max-width: 767px) {
+    .works_img2 {
+        display: block;
+    }
+
+    .works_img2 .PC {
+        width: 315px;
+        margin-bottom: 30px;
+    }
+
+    .works_img2 .SP {
+        width: 158px;
+    }
+
+    .part7 {
+        top: 530px;
+        right: 60px;
+    }
+
+    .works_img2 {
+        padding-bottom: 100px;
+    }
+
+    .part8 {
+        display: none;
+    }
+
+    .part9 {
+        width: 41px;
+        top: 2800px;
+        left: 0px;
+    }
+}
+
+/* works詳細web3 */
+
+.part10 {
+    width: 131px;
+    position: absolute;
+    top: 2700px;
+    left: 300px;
+}
+
+.part11 {
+    width: 60px;
+    position: absolute;
+    top: 3500px;
+    left: 90px;
+}
+
+@media screen and (max-width: 767px) {
+    .part10 {
+        display: none;
+    }
+
+    .part11 {
+        width: 41px;
+        top: 2500px;
+        left: 0px;
+    }
+}
+
+/* works詳細バナー1 */
+
+.works_banner {
+    width: 700px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+    .works_banner {
+        width: 315px;
+        padding-bottom: 100px;
+    }
+}

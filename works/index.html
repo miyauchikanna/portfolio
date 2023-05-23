@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works｜Canna design</title>
+    <meta name="description" content="制作実績一覧">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../android-chrome-192x192.png">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../index.html#service">Service</a></li>
+                <li><a href="#header"><span>Works</span></a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sp_btn">
+            <span></span>
+            <div class="sp_btn_arrow"><img src="../img/sp_btn@2x.png" alt="矢印"></div>
+        </div>
+        <nav class="sp_nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../index.html#service">Service</a></li>
+                <li><a href="#header"><span>Works</span></a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="top_part"><img src="img/leaf@2x.png" alt="木"></div>
+    </header>
+
+    <section class="works">
+        <h2 class="works_title"><img src="img/works_title@2x.png" alt="Works"></h2>
+        <div class="works_item">
+            <div class="works_info">
+                <p>コーポレートサイト</p>
+                <div><a href="web02.html"><img src="img/works1@2x-80.jpg" alt="デザインカフェ作品"></a></div>
+            </div>
+            <div class="works_info">
+                <p>コーポレートサイト</p>
+                <div><a href="web01.html"><img src="img/works2@2x-80.jpg" alt="LIFE"></a></div>
+            </div>
+            <div class="works_info">
+                <p>コーポレートサイト</p>
+                <div><a href="web03.html"><img src="img/works3@2x-80.jpg" alt="WORKERS"></a></div>
+            </div>
+            <div class="works_info">
+                <p>バナー広告</p>
+                <div><a href="banner01.html"><img src="img/works4@2x-80.jpg" alt="デザスタバナー"></a></div>
+            </div>
+            <div class="works_info">
+                <p>バナー広告</p>
+                <div><a href="banner02.html"><img src="img/works5@2x-80.jpg" alt="TRRRRIR"></a></div>
+            </div>
+            <div class="works_info">
+                <p>バナー広告</p>
+                <div><a href="banner03.html"><img src="img/works6@2x-80.jpg" alt="デラックスバーガー"></a></div>
+            </div>
+            <div class="works_info">
+                <p>バナー広告</p>
+                <div><a href="banner04.html"><img src="img/works7@2x-80.jpg" alt="デラックスバーガー"></a></div>
+            </div>
+        </div>
+        <div class="part1"><img class="js-parallax" src="img/part1@2x.png" alt="葉"></div>
+        <div class="part2"><img class="js-parallax" src="img/part2@2x.png" alt="葉"></div>
+        <div class="part3"><img class="js-parallax" src="img/part3@2x.png" alt="葉"></div>
+    </section>
+
+    <footer>
+        <nav class="footer_nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../index.html#service">Service</a></li>
+                <li><a href="#header">Works</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <ul class="sns_btn">
+            <li><a href="https://www.instagram.com/knn_711/"><img src="img/inst_logo@2x.png" alt="instagram"></a></li>
+            <li><a href="mailto:knn_pink.mint7116@icloud.com"><img src="img/mail_logo@2x.png" alt="mail"></a></li>
+        </ul>
+        <p class="footer_item">@2023 Canna design</p>
+    </footer>
+    <div class="top"><a href="#header"><img src="img/top@2x.png" alt="top"></a></div>
+
+    <script>
+        $(function () {
+            $('.sp_btn, .sp_nav li').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            });
+
+            // ページトップフェードイン
+            $('.top').hide();
+            $(window).on('scroll', function () {
+                if ($(this).scrollTop() > 700) {
+                    $('.top').fadeIn();
+                } else {
+                    $('.top').fadeOut();
+                }
+            });
+        })
+    </script>
+
+    <script type="text/javascript">
+        const targets = document.getElementsByClassName('works');
+        for (let i = targets.length; i--;) {
+            let observer = new IntersectionObserver((entries, observer) => {
+                for (let j = entries.length; j--;) {
+                    if (entries[j].isIntersecting) {
+                        entries[j].target.classList.add('active');
+                        observer.unobserve(entries[j].target);
+                    }
+                }
+            });
+            observer.observe(targets[i]);
+        }
+
+        {
+            const targets = document.getElementsByClassName('works_info');
+            for (let i = targets.length; i--;) {
+                let observer = new IntersectionObserver((entries, observer) => {
+                    for (let j = entries.length; j--;) {
+                        if (entries[j].isIntersecting) {
+                            entries[j].target.classList.add('active');
+                            observer.unobserve(entries[j].target);
+                        }
+                    }
+                });
+                observer.observe(targets[i]);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

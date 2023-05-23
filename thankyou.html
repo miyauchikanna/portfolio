@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thankyou｜Canna design</title>
+    <meta name="description" content="お問い合わせいただきありがとうございます。">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="android-chrome-192x192.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="header_nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#service">Service</a></li>
+                <li><a href="works/index.html">Works</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sp_btn"><span></span></div>
+        <nav class="sp_nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#service">Service</a></li>
+                <li><a href="works/index.html">Works</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="thankyou">
+        <div class="thankyou_block">
+            <div class="thankyou_img"><img src="img/thank you@2x.png" alt="木"></div>
+            <div class="thankyou_item">
+                <h2>Thank you</h2>
+                <p class="thankyou_text">お問い合わせいただきありがとうございます。<br>ご入力いただいた内容を確認後、順次対応させていただきます。</p>
+            </div>
+            <div class="thankyou_sp"><img src="img/thankyou_sp_1@2x.png" alt="木"></div>
+        </div>
+    </section>
+
+    <footer>
+        <nav class="footer_nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#service">Service</a></li>
+                <li><a href="works/index.html">Works</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <ul class="sns_btn">
+            <li><a href="https://www.instagram.com/knn_711/"><img src="img/inst_logo@2x.png" alt="instagram"></a></li>
+            <li><a href="mailto:knn_pink.mint7116@icloud.com"><img src="img/mail_logo@2x.png" alt="mail"></a></li>
+        </ul>
+        <p class="footer_item">@2023 Canna design</p>
+    </footer>
+
+
+    <script type="text/javascript">
+        const targets = document.getElementsByClassName('thankyou');
+        for (let i = targets.length; i--;) {
+            let observer = new IntersectionObserver((entries, observer) => {
+                for (let j = entries.length; j--;) {
+                    if (entries[j].isIntersecting) {
+                        entries[j].target.classList.add('active');
+                        observer.unobserve(entries[j].target);
+                    }
+                }
+            });
+            observer.observe(targets[i]);
+        }
+    </script>
+</body>
+
+</html>
