@@ -15,6 +15,18 @@
     line-height: 1.75;
     font-size: 40px;
     font-feature-settings: normal;
+    animation-name: open-keyanime1;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+}
+
+@keyframes open-keyanime1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* scroll */
@@ -511,6 +523,7 @@ button:hover {
 
     .contact_contact {
         max-width: 315px;
+        padding-bottom: 280px;
     }
 
     .contact_text {
