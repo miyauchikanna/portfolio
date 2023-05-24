@@ -52,8 +52,9 @@
 
 @media screen and (max-width: 767px) {
     .copy {
+        font-size: 35px;
         left: 45px;
-        top: 475px;
+        top: 364px;
     }
 
     .scroll {
