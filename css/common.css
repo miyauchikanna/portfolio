@@ -59,6 +59,7 @@ html {
 
 body {
     background: linear-gradient(to bottom, #def0fb, #fff 40%);
+    overflow-x: hidden;
 }
 
 /* ヘッダー */

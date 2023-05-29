@@ -6,6 +6,21 @@
     width: 100%;
 }
 
+.main2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1060px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1.5s, transform 3s;
+}
+
+.main2.active {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
 .copy {
     position: absolute;
     left: 225px;
@@ -16,7 +31,7 @@
     font-size: 40px;
     font-feature-settings: normal;
     animation-name: open-keyanime1;
-    animation-duration: 5s;
+    animation-duration: 10s;
     animation-fill-mode: both;
 }
 
@@ -63,10 +78,17 @@
 }
 
 @media screen and (max-width: 767px) {
+    .main2 {
+        width: 400px;
+        top: 150px;
+        z-index: 0;
+    }
+
     .copy {
         font-size: 35px;
         left: 45px;
         top: 364px;
+        z-index: 1;
     }
 
     .scroll {
@@ -288,6 +310,7 @@
 
 .works {
     margin-top: 450px;
+    position: relative;
 }
 
 .works_back {
@@ -418,12 +441,12 @@
     display: none;
 }
 
-.works {
+.works_title {
     opacity: 0;
     transform: translateX(50px);
     transition: opacity 1.5s, transform 1s;
 }
-.works.active {
+.works_title.active {
     opacity: 1;
     transform: translateX(0px);
 }
@@ -832,7 +855,7 @@ button:hover {
 .part2 {
     width: 50px;
     position: absolute;
-    left: -130px;
+    left: -100px;
 }
 
 @media screen and (max-width: 767px) {

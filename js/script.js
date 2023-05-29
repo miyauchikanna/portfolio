@@ -10,9 +10,11 @@
 
   $(function(){
   const images = document.getElementsByClassName('js-parallax');
-  new simpleParallax(images, {
+  if(images.length > 0){
+    new simpleParallax(images, {
       scale: 2,
       delay: .8,
       transition: 'cubic-bezier(0,0,0,1)'
   });
+  }
 });

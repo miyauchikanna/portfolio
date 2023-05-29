@@ -24,9 +24,13 @@
     <header class="header" id="header">
         <div class="main">
             <picture>
-                <source srcset="img/main_sp@2x.png" media="(max-width: 767px)">
-                <img src="img/main.png" alt="空と葉">
+                <source srcset="img/top1_sp@2x.png" media="(max-width: 767px)">
+                <img src="img/top_1@2x.png" alt="空と葉">
             </picture>
+        </div>
+        <div class="main2">
+            <source srcset="img/top2_sp@2x.png" media="(max-width: 767px)">
+            <img src="img/top_2@2x.png" alt="空と葉">
         </div>
         <nav class="header_nav">
             <ul>
@@ -245,7 +249,7 @@
             </ul>
         </nav>
         <ul class="sns_btn">
-            <li><a href="https://www.instagram.com/knn_711/" target="_blank"><img src="img/inst_logo@2x.png"
+            <li><a href="https://www.instagram.com/canna__design/" target="_blank"><img src="img/inst_logo@2x.png"
                         alt="instagram"></a></li>
             <li><a href="mailto:knn_pink.mint7116@icloud.com"><img src="img/mail_logo@2x.png" alt="mail"></a></li>
         </ul>
@@ -322,7 +326,7 @@
         }
 
         {
-            const targets = document.getElementsByClassName('works');
+            const targets = document.getElementsByClassName('works_title');
             for (let i = targets.length; i--;) {
                 let observer = new IntersectionObserver((entries, observer) => {
                     for (let j = entries.length; j--;) {
@@ -338,6 +342,21 @@
 
         {
             const targets = document.getElementsByClassName('contact');
+            for (let i = targets.length; i--;) {
+                let observer = new IntersectionObserver((entries, observer) => {
+                    for (let j = entries.length; j--;) {
+                        if (entries[j].isIntersecting) {
+                            entries[j].target.classList.add('active');
+                            observer.unobserve(entries[j].target);
+                        }
+                    }
+                });
+                observer.observe(targets[i]);
+            }
+        }
+
+        {
+            const targets = document.getElementsByClassName('main2');
             for (let i = targets.length; i--;) {
                 let observer = new IntersectionObserver((entries, observer) => {
                     for (let j = entries.length; j--;) {
